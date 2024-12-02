@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Bot Discord Cyberpunk</title>
+    <style>
+        body {
+            background-color: #0a0a0a;
+            color: #00ff00;
+            font-family: 'Courier New', monospace;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        header {
+            background-color: #1a1a1a;
+            padding: 1rem;
+            text-align: center;
+            border-bottom: 2px solid #00ff00;
+        }
+        h1, h2 {
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        .stat-card {
+            background-color: #1a1a1a;
+            border: 2px solid #00ff00;
+            border-radius: 10px;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 0 10px #00ff00;
+        }
+        .stat-value {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-top: 0.5rem;
+        }
+        .menu {
+            margin-top: 2rem;
+        }
+        .menu a {
+            display: inline-block;
+            background-color: #00ff00;
+            color: #0a0a0a;
+            padding: 10px 20px;
+            margin-right: 1rem;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .menu a:hover {
+            background-color: #0a0a0a;
+            color: #00ff00;
+            box-shadow: 0 0 10px #00ff00;
+        }
+        .glitch {
+            animation: glitch 1s linear infinite;
+        }
+        @keyframes glitch {
+            2%, 64% { transform: translate(2px,0) skew(0deg); }
+            4%, 60% { transform: translate(-2px,0) skew(0deg); }
+            62% { transform: translate(0,0) skew(5deg); }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="glitch">Dashboard Cyberpunk</h1>
+    </header>
+    <div class="container">
+        <h2>Bienvenue, <%= user.username %></h2>
+        <div class="stats">
+            <div class="stat-card">
+                <h3>Utilisateurs</h3>
+                <div class="stat-value"><%= stats.users %></div>
+            </div>
+            <div class="stat-card">
+                <h3>Serveurs</h3>
+                <div class="stat-value"><%= stats.guilds %></div>
+            </div>
+            <div class="stat-card">
+                <h3>Personnages</h3>
+                <div class="stat-value"><%= stats.characters %></div>
+            </div>
+        </div>
+        <div class="menu">
+            <a href="/admin/users">Gérer les Utilisateurs</a>
+            <a href="/admin/guilds">Gérer les Serveurs</a>
+            <a href="/admin/characters">Gérer les Personnages</a>
+            <a href="/auth/logout">Déconnexion</a>
+        </div>
+    </div>
+</body>
+</html>

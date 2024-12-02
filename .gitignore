@@ -1,0 +1,65 @@
+# Dépendances
+node_modules/
+package-lock.json
+
+# Fichiers de configuration contenant des secrets
+.env
+config.json
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Fichiers de runtime
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Répertoire pour les fichiers instrumentés par jscoverage/JSCover
+lib-cov
+
+# Répertoire de couverture utilisé par des outils comme istanbul
+coverage
+
+# Répertoire de build de nyc
+.nyc_output
+
+# Répertoire de sortie Grunt intermediate
+.grunt
+
+# Répertoire de cache Bower
+bower_components
+
+# Répertoire de sortie de compilation TypeScript
+dist/
+
+# Répertoire de cache de Gatsby
+.cache/
+
+# Fichiers générés par les éditeurs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+
+# Fichiers de débogage
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Fichiers de build
+build/
+out/
+
+# Fichiers temporaires
+tmp/
+temp/
